@@ -22,7 +22,7 @@ create table [Пользователь](
 )
 
 create table [Изделие](
-[Наименование] int not null,
+[Наименование] int not null Primary key,
 [Размеры] datetime not null
 )
 
@@ -33,7 +33,7 @@ create table [Спецификация полуфабрикаты](
 )
 
 create table [Тип оборудования](
-[Наименование] int not null
+[Наименование] int not null Primary key
 )
 
 create table [Оборудование](
@@ -89,7 +89,9 @@ create table [Украшение для торта](
 )
 
 create table [Поставщик](
-[Наименование] int not null,
+[Наименование] int not null Primary key,
 [Адрес] datetime null,
 [Срок доставки] int not null
 )
+
+alter table [Украшение для торта] WITH CHECK ADD FOREIGN KEY ([Основной поставщик]) REFERENCES [Поставщик] ([Наименование]);
