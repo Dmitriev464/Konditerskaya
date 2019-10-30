@@ -44,7 +44,7 @@ create table [Оборудование](
 
 create table [Спецификация операции](
 [Изделие] nvarchar(250) not null,
-[Операция] nvarchar(250) not null,
+[Операция] nvarchar(100) not null,
 [Порядковый номер] int not null,
 [Тип оборудования] nvarchar(250) null,
 [Время на операцию] nvarchar(250) not null
@@ -52,13 +52,13 @@ create table [Спецификация операции](
 
 create table [Спецификация украшения для торта](
 [Изделие] nvarchar(250) not null,
-[Урашение для торта] nvarchar(250) not null,
+[Урашение для торта] int not null,
 [Количесвто] int not null
 )
 
 create table [Спецификация ингредиенты](
 [Изделие] nvarchar(250) not null,
-[Ингредиент] nvarchar(250) not null,
+[Ингредиент] int not null,
 [Количество] int not null
 )
 
